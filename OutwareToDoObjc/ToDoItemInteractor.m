@@ -27,14 +27,14 @@
 
 - (void)addItem:(ToDoItem *)item
 {
-    NSMutableArray* items = [NSMutableArray arrayWithArray:[ToDoDataStore sharedStore].items];
+    NSMutableArray *items = [NSMutableArray arrayWithArray:[ToDoDataStore sharedStore].items];
     [items addObject:item];
     [ToDoDataStore sharedStore].items = [items copy];
 }
 
 - (void)removeItemAtIndex:(NSInteger)index
 {
-    NSMutableArray* items = [NSMutableArray arrayWithArray:[ToDoDataStore sharedStore].items];
+    NSMutableArray *items = [NSMutableArray arrayWithArray:[ToDoDataStore sharedStore].items];
     [items removeObjectAtIndex:index];
     [ToDoDataStore sharedStore].items = [items copy];
 }
