@@ -1,4 +1,4 @@
-om-viper
+OM-VIPER
 ========
 
-Outware Mobile's Viper Demo
+Outware Mobile's VIPER Demo
