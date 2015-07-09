@@ -67,7 +67,7 @@ describe(@"ToDoItemInteractor", ^{
             [[theValue(dataStore.items.count) should] equal:theValue(2)];
         });
         
-        pending(@"should not add a nil item", ^{
+        it(@"should not add a nil item", ^{
             dataStore.items = @[];
             
             [[theBlock(^{ [interactor addItem:nil]; }) shouldNot] raise];
@@ -95,7 +95,7 @@ describe(@"ToDoItemInteractor", ^{
             [[[interactor itemAtIndex:1] should] equal:anItem2];
         });
         
-        pending(@"should return a nil item at an invalid index", ^{
+        it(@"should return a nil item at an invalid index", ^{
             dataStore.items = @[];
             
             [[theBlock(^{ [interactor itemAtIndex:0]; }) shouldNot] raise];
@@ -126,7 +126,7 @@ describe(@"ToDoItemInteractor", ^{
             [[[interactor itemAtIndex:0] should] equal:anItem1];
         });
         
-        pending(@"removing an item at an invalid index should fail gracefully", ^{
+        it(@"removing an item at an invalid index should fail gracefully", ^{
             dataStore.items = @[];
             
             [[theBlock(^{ [interactor removeItemAtIndex:0]; }) shouldNot] raise];
